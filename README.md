@@ -30,6 +30,7 @@ Senior Project · Software Engineering Department, College of Engineering, Unive
 - [Security](#security)
 - [Deployment](#deployment)
 - [Project report](#project-report)
+- [Contributing](#contributing)
 - [Team](#team)
 
 ---
@@ -357,6 +358,14 @@ The prototype met its functional goals. Recommendations are generated instantly 
 3. eLearningIndustry, "4 Ways Effective Course Scheduling Promotes Student Success" (flexible offerings for diverse student populations).
 4. Tracebit Blog, "Detection Engineering and Honeypots" (honeypots invert the detection problem and reduce false positives).
 5. Wikipedia, "Requirements engineering" (functional and non-functional requirements).
+
+---
+
+## Contributing
+
+1. Create a branch from `main` (for example `git checkout -b feature/my-change`).
+2. Make your change and run `npm run check` (lint, typecheck and tests) before committing.
+3. Push the branch and open a pull request with a clear title and a short description of what changed and why.
 
 ---
 
