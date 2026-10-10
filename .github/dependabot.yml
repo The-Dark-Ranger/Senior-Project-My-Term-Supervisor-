@@ -8,6 +8,13 @@ updates:
       minor-and-patch:
         update-types: [minor, patch]
     open-pull-requests-limit: 10
+    ignore:
+      # @types/node must match the Node.js runtime in .nvmrc (24 LTS).
+      - dependency-name: '@types/node'
+        update-types: [version-update:semver-major]
+      # typescript-eslint (via eslint-config-next) does not support TypeScript 7 yet.
+      - dependency-name: typescript
+        versions: ['>=7']
   - package-ecosystem: github-actions
     directory: /
     schedule:
