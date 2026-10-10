@@ -1,0 +1,167 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: hsl(210 40% 98%);
+  --foreground: hsl(215 28% 17%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(215 28% 17%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(215 28% 17%);
+  --primary: hsl(221.2 83.2% 53.3%);
+  --primary-foreground: hsl(210 40% 98%);
+  --secondary: hsl(210 40% 92%);
+  --secondary-foreground: hsl(215 25% 27%);
+  --muted: hsl(210 40% 95%);
+  --muted-foreground: hsl(215 16% 42%);
+  --accent: hsl(142.1 70.6% 38%);
+  --accent-foreground: hsl(0 0% 100%);
+  --destructive: hsl(0 72.2% 50.6%);
+  --destructive-foreground: hsl(0 0% 98%);
+  --success: hsl(142 71% 32%);
+  --success-soft: hsl(141 76% 94%);
+  --warning: hsl(32 95% 38%);
+  --warning-soft: hsl(48 100% 93%);
+  --info: hsl(221 83% 45%);
+  --info-soft: hsl(214 95% 95%);
+  --border: hsl(214.3 31.8% 89%);
+  --input: hsl(214.3 31.8% 86%);
+  --ring: hsl(221.2 83.2% 53.3%);
+  --radius: 0.625rem;
+
+  /* Degree-map course status colours */
+  --status-completed: hsl(152 60% 90%);
+  --status-completed-border: hsl(152 55% 42%);
+  --status-completed-fg: hsl(156 70% 20%);
+  --status-planned: hsl(45 100% 88%);
+  --status-planned-border: hsl(38 92% 50%);
+  --status-planned-fg: hsl(30 80% 25%);
+  --status-available: hsl(214 95% 93%);
+  --status-available-border: hsl(217 91% 60%);
+  --status-available-fg: hsl(224 70% 30%);
+  --status-locked: hsl(220 14% 94%);
+  --status-locked-border: hsl(220 13% 80%);
+  --status-locked-fg: hsl(220 9% 40%);
+}
+
+.dark {
+  --background: hsl(222.2 84% 4.9%);
+  --foreground: hsl(210 40% 98%);
+  --card: hsl(222.2 47.4% 9.5%);
+  --card-foreground: hsl(210 40% 98%);
+  --popover: hsl(222.2 47.4% 9.5%);
+  --popover-foreground: hsl(210 40% 98%);
+  --primary: hsl(217.2 91.2% 59.8%);
+  --primary-foreground: hsl(222.2 47.4% 11.2%);
+  --secondary: hsl(217.2 32.6% 17.5%);
+  --secondary-foreground: hsl(210 40% 92%);
+  --muted: hsl(217.2 32.6% 15%);
+  --muted-foreground: hsl(215 20% 68%);
+  --accent: hsl(142.1 70% 45%);
+  --accent-foreground: hsl(144 80% 8%);
+  --destructive: hsl(0 72% 55%);
+  --destructive-foreground: hsl(0 0% 98%);
+  --success: hsl(142 69% 58%);
+  --success-soft: hsl(145 60% 12%);
+  --warning: hsl(43 96% 58%);
+  --warning-soft: hsl(38 70% 12%);
+  --info: hsl(213 94% 68%);
+  --info-soft: hsl(220 60% 15%);
+  --border: hsl(217.2 32.6% 18%);
+  --input: hsl(217.2 32.6% 22%);
+  --ring: hsl(217.2 91.2% 59.8%);
+
+  --status-completed: hsl(155 55% 14%);
+  --status-completed-border: hsl(152 55% 42%);
+  --status-completed-fg: hsl(150 70% 82%);
+  --status-planned: hsl(38 70% 15%);
+  --status-planned-border: hsl(38 92% 50%);
+  --status-planned-fg: hsl(45 95% 80%);
+  --status-available: hsl(220 60% 17%);
+  --status-available-border: hsl(217 91% 60%);
+  --status-available-fg: hsl(213 95% 85%);
+  --status-locked: hsl(217 25% 12%);
+  --status-locked-border: hsl(217 20% 25%);
+  --status-locked-fg: hsl(215 15% 58%);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-status-completed: var(--status-completed);
+  --color-status-completed-border: var(--status-completed-border);
+  --color-status-completed-fg: var(--status-completed-fg);
+  --color-status-planned: var(--status-planned);
+  --color-status-planned-border: var(--status-planned-border);
+  --color-status-planned-fg: var(--status-planned-fg);
+  --color-status-available: var(--status-available);
+  --color-status-available-border: var(--status-available-border);
+  --color-status-available-fg: var(--status-available-fg);
+  --color-status-locked: var(--status-locked);
+  --color-status-locked-border: var(--status-locked-border);
+  --color-status-locked-fg: var(--status-locked-fg);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+/* React Flow: blend the canvas controls with the app theme. */
+.react-flow__controls-button {
+  background: var(--card);
+  border-color: var(--border);
+  color: var(--foreground);
+  fill: var(--foreground);
+}
+.react-flow__controls-button:hover {
+  background: var(--muted);
+}
+.react-flow__attribution {
+  background: transparent;
+}
